@@ -1,7 +1,7 @@
 # Wahlpflichtmanager
 
 ## Was
-VBA Macro für Excel, dass so fair wie möglich Fächer an Schüler:innen verteilt.
+VBA Makro für Excel, dass so fair wie möglich Fächer an Schüler:innen verteilt.
 
 VBA Macro for Excel, that tries to distribute chosen subjects as fair as possible among students/pupils.
 
