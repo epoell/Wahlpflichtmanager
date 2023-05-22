@@ -1,42 +1,39 @@
 'Konstanten
 '----------
 'Anzahl moeglicher Faecher, muss fest sein um Arrays initiieren zu koennen
-Public Const Faecherzahl As Integer = 26
+Public Const Faecherzahl As Long = 26
 'Tabellennamen
 Public Const StrWahlen As String = "Wahlen"
 Public Const StrWahlopt As String = "Wahlmoeglichkeiten"
 Public Const StrZuteilung As String = "Zuteilung"
 'Spaltensortierung Wahloptionen
-'| Kennziffer | Fachname | Kursgroesse |
-Public Const SpalteZiffer   As Integer = 1
-Public Const SpalteFach     As Integer = 2
-Public Const SpalteGroesse  As Integer = 3
+'Kennziffer | Fachname | Kursgroesse
+Public Const SpalteZiffer   As Long = 1
+Public Const SpalteFach     As Long = 2
+Public Const SpalteGroesse  As Long = 3
 'Spaltensortierung Wahlen
-'| Vorname | Nachname | Klasse | 1. Wunsch | 2. Wunsch | 3. Wunsch | 4. Wunsch | 5. Wunsch |
-Public Const SpalteVorname  As Integer = 1
-Public Const SpalteNachname As Integer = 2
-Public Const SpalteKlasse   As Integer = 3
-Public Const Spalte1Wunsch  As Integer = 4
-Public Const Spalte2Wunsch  As Integer = 5
-Public Const Spalte3Wunsch  As Integer = 6
-Public Const Spalte4Wunsch  As Integer = 7
-Public Const Spalte5Wunsch  As Integer = 8
+'Vorname | Nachname | Klasse | 1. Wunsch | 2. Wunsch | 3. Wunsch | 4. Wunsch | 5. Wunsch
+Public Const SpalteVorname  As Long = 1
+Public Const SpalteNachname As Long = 2
+Public Const SpalteKlasse   As Long = 3
+Public Const Spalte1Wunsch  As Long = 4
+Public Const Spalte2Wunsch  As Long = 5
+Public Const Spalte3Wunsch  As Long = 6
+Public Const Spalte4Wunsch  As Long = 7
+Public Const Spalte5Wunsch  As Long = 8
 'Spaltensortieung ZuteilungsSheet
 'Wie bei Wahlen, zuteilungSpalte daneben mit Leerspalte fuer Optik
-Public Const ZutSpalte      As Integer = 10
-Public Const ZutFachSpalte  As Integer = 11
-'Ausgabe wer mit wem getauscht wurde anzeigen
+Public Const ZutSpalte      As Long = 10
+Public Const ZutFachSpalte  As Long = 11
+'Ausgabe wer mit wem getauscht
 Public Const AusgabeBln As Boolean = True
-
-'------------------------------------------------------
-'------------------------------------------------------
 
 Sub FachVerteilung()
     '------------------------------------------------------
     'Pruefen ob Arbeitsmappe korrekt aufgebaut
     'und Konstanten/Variablen richtig belegt
     '------------------------------------------------------
-    Dim Response As Integer
+    Dim Response As Long
     Dim Msg, Style, Title
     
     'Wahloptionen liegen in "Wahlmoeglichkeiten"
@@ -137,10 +134,10 @@ Sub FachVerteilung()
     'Aktivitaten verbergen, bis alles fertig ist
     Application.ScreenUpdating = False
     
-    Dim i As Integer
-    Dim count As Integer
-    Dim student As Integer
-    Dim fach As Integer
+    Dim i As Long
+    Dim count As Long
+    Dim student As Long
+    Dim fach As Long
     Dim ZuteilungsSheet As Worksheet
     Dim Sheetname As String
     
@@ -171,15 +168,15 @@ SetName:
     ZuteilungsSheet.Cells(1, ZutFachSpalte) = "Fachname"
     
     '2. Zaehlen, wie oft welches Fach gewaehlt wurde und in 3 Arrays ablegen, Index ist Fachkennziffer
-    Dim Erstwunsch(Faecherzahl) As Integer
-    Dim Zweitwunsch(Faecherzahl) As Integer
-    Dim Drittwunsch(Faecherzahl) As Integer
-    Dim Viertwunsch(Faecherzahl) As Integer
-    Dim Fuenftwunsch(Faecherzahl) As Integer
-    Dim FirstStudent As Integer
-    Dim LastStudent As Integer
-    Dim BelowStudents As Integer
-    Dim BelowSubjects As Integer
+    Dim Erstwunsch(Faecherzahl) As Long
+    Dim Zweitwunsch(Faecherzahl) As Long
+    Dim Drittwunsch(Faecherzahl) As Long
+    Dim Viertwunsch(Faecherzahl) As Long
+    Dim Fuenftwunsch(Faecherzahl) As Long
+    Dim FirstStudent As Long
+    Dim LastStudent As Long
+    Dim BelowStudents As Long
+    Dim BelowSubjects As Long
     FirstStudent = 2
     LastStudent = Schuelerzaehlen
     BelowStudents = LastStudent + 5
@@ -215,10 +212,10 @@ SetName:
 
         
     '3. Array anlegen, mit verfuegbaren Plaetzen je Fach, Index ist Fachkennziffer
-    Dim FreiePlaetze(Faecherzahl) As Integer
+    Dim FreiePlaetze(Faecherzahl) As Long
     
     For fach = 1 To Faecherzahl
-        FreiePlaetze(fach) = ThisWorkbook.Sheets(StrWahlopt).Cells(fach + 1, SpalteGroesse).Value 'ConvertToInt(ThisWorkbook.Sheets(StrWahlopt).Cells(i, SpalteGroesse))
+        FreiePlaetze(fach) = ThisWorkbook.Sheets(StrWahlopt).Cells(fach + 1, SpalteGroesse).Value 'ConvertCellToInt(ThisWorkbook.Sheets(StrWahlopt).Cells(i, SpalteGroesse))
     Next fach
         
     'Wenn Liste ohne Priorisierung, dann zufaellig sortieren um Vergabe so fair wie moeglich zu machen
@@ -245,9 +242,9 @@ SetName:
     'Annahme bei Sorted = True: Schuelerinnen die frueh abgeben, stehen oben in der Liste. Je weiter oben jemand steht, desto eher bekommen sie ihren Erstwunsch
     'Sonst: erstmal zufaellig sortieren
     '------------------------------------------------------
-    Dim wunsch1 As Integer
-    Dim wunsch2 As Integer
-    Dim ohnePlatz As Integer
+    Dim wunsch1 As Long
+    Dim wunsch2 As Long
+    Dim ohnePlatz As Long
     ohnePlatz = 0
     
     'Schueler:innen von oben nach unten durchgehen
@@ -276,12 +273,12 @@ SetName:
     
     '------------------------------------------------------
 
-    Dim wunsch1x As Integer
-    Dim wunsch2x As Integer
-    Dim wunsch3x As Integer
-    Dim zuteilungy As Integer
-    Dim wunsch1y As Integer
-    Dim wunsch2y As Integer
+    Dim wunsch1x As Long
+    Dim wunsch2x As Long
+    Dim wunsch3x As Long
+    Dim zuteilungy As Long
+    Dim wunsch1y As Long
+    Dim wunsch2y As Long
     
     If AusgabeBln Then
         i = 1
@@ -305,7 +302,7 @@ SetName:
                 '6.a von unten nach oben: Schueler:in y finden, (von unten nach oben relevant, wenn Liste nach Priortaet sortiert, sonst egal)
                 For y = LastStudent To FirstStudent Step -1
                     'mit Erstwunsch im Fach, das x als Zweitwunsch hat, und mit Zweitwunsch von y noch nicht voll
-                    zuteilungy = ConvertToInt(.Cells(y, ZutSpalte))
+                    zuteilungy = ConvertCellToInt(.Cells(y, ZutSpalte))
                     wunsch1y = GetWishy(ZuteilungsSheet, y, 1)
                     wunsch2y = GetWishy(ZuteilungsSheet, y, 2)
                     If zuteilungy = wunsch1y And wunsch2x = wunsch1y And FreiePlaetze(wunsch2y) > 0 Then
@@ -343,7 +340,7 @@ SetName:
                 'von unten nach oben: Schueler:in y finden,
                 For y = LastStudent To FirstStudent Step -1
                     'mit Erstwunsch im Fach, das x als Erstwunsch hat, und mit Zweitwunsch von y noch nicht voll
-                    zuteilungy = ConvertToInt(.Cells(y, ZutSpalte))
+                    zuteilungy = ConvertCellToInt(.Cells(y, ZutSpalte))
                     wunsch1y = GetWishy(ZuteilungsSheet, y, 1)
                     wunsch2y = GetWishy(ZuteilungsSheet, y, 2)
                     If zuteilungy = wunsch1y And wunsch1x = wunsch1y And FreiePlaetze(wunsch2y) > 0 Then
@@ -374,7 +371,7 @@ SetName:
                 '7.a von unten nach oben: Schueler:in y finden, (von unten nach oben relevant, wenn Liste nach Priortaet sortiert, sonst egal)
                 For y = LastStudent To FirstStudent Step -1
                     'mit Erstwunsch im Fach, das x als Drittwunsch hat, und mit Zweitwunsch von y noch nicht voll
-                    zuteilungy = ConvertToInt(.Cells(y, ZutSpalte))
+                    zuteilungy = ConvertCellToInt(.Cells(y, ZutSpalte))
                     wunsch1y = GetWishy(ZuteilungsSheet, y, 1)
                     wunsch2y = GetWishy(ZuteilungsSheet, y, 2)
                     wunsch3y = GetWishy(ZuteilungsSheet, y, 3)
@@ -534,21 +531,21 @@ End Sub
 
 'Zaehlen wie vile Schueler:innen in der Liste stehen
 'Annahme: es stehen nur Faecher in Spalte B in Wahlenmoeglichkeiten
-Function Faecherzaehlen() As Integer
+Function Faecherzaehlen() As Long
     Faecherzaehlen = ThisWorkbook.Sheets(StrWahlopt).Cells(Rows.count, 1).End(xlUp).Row - 1 '-1 da Titel vorhanden
 End Function
 
 'Zaehlen wie vile Schueler:innen in der Liste stehen
 'Annahme: es stehen nur Schuelerinnen in Spalte A in Wahlen
 'Ist eig 1 zu viel, da Titel mitgezaehlt, ist aber gut, da es eh nur fuer Zeilennummer genutzt wird
-Function Schuelerzaehlen() As Integer
+Function Schuelerzaehlen() As Long
     Schuelerzaehlen = ThisWorkbook.Sheets(StrWahlen).Cells(Rows.count, 1).End(xlUp).Row
 End Function
 
 'Den Wunsch mit der Prioritaet Prio von dem:der gegegebenen Schueler:in bestimmen
-Function GetWishy(ZutSheet As Worksheet, Stud As Variant, Prio As Integer) As Integer
+Function GetWishy(ZutSheet As Worksheet, Stud As Variant, Prio As Long) As Long
     'Spalten: 1.Wunsch: C->3 = 2+Prio=1, 2.Wunsch: D->4 = 2+Prio=2, 3.Wunsch: E->5 = 2+Prio=3, ...
-    GetWishy = ConvertToInt(ZutSheet.Cells(Stud, SpalteKlasse + Prio))
+    GetWishy = ConvertCellToInt(ZutSheet.Cells(Stud, SpalteKlasse + Prio))
 End Function
 
 'Den Namen eines Fachs an Hand der Kennziffer bestimmen
@@ -557,7 +554,7 @@ Function GetSubjectname(Subjectnumber As Variant) As String
 End Function
 
 'Ausgabe wer mit wem getauscht wurde
-Sub PrintSwitchInfo(ZutSheet As Worksheet, pos As Integer, Stud1 As Variant, Stud2 As Variant, Wishno As String)
+Sub PrintSwitchInfo(ZutSheet As Worksheet, pos As Long, Stud1 As Variant, Stud2 As Variant, Wishno As String)
     Dim name1 As String
     Dim name2 As String
     
@@ -571,12 +568,12 @@ End Sub
 
 'Zellinhalt in Integer umwandeln
 'Dank an stackoverflow
-Function ConvertToInt(Cell As Range) As Integer
+Function ConvertCellToInt(Cell As Range) As Integer
    On Error GoTo NOT_AN_INTEGER
-   ConvertToInt = CInt(Cell.Value)
+   ConvertCellToInt = CInt(Cell.Value)
    Exit Function
 NOT_AN_INTEGER:
-   ConvertToInteger = 0
+   ConvertCellToInt = 0
 End Function
 
 'Testen, ob es ein Worksheet mit dem gegebenen Namen gibt
