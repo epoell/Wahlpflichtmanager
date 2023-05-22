@@ -14,7 +14,7 @@ Daraus wird (in einem neuen Tabellenblatt) eine Zuteilung wie folgt errechnet, u
 4. Sonst wird der höchstmögliche noch freie Wunsch zugeteilt.
 5. Die Verteilung geht nicht unbedingt auf. Schüler:innen deren Wünsche nicht erfüllt werden konnten werden lila markiert, zur manuellen Nachbearbeitung.
 
-In Testläufen konnten aber 390 aus 400 Schüler:innen zugeteilt werden.
+In Testläufen konnten aber 390 aus 400 Schüler:innen zugeteilt werden. Die Laufzeit betrug wenige Sekunden.
 
 Es kann ausgewählt werden (durch einen Dialog beim Start des Macros), ob die Liste der Schüler:innen nach Priorität sortiert ist, um die Schüler:innen weiter oben in der Liste bei der Wahl zu bevorteilen. Das kann z.B. der chronologischen Reihenfolge entsprechen, in der Schüler:innen die Rückmeldungen einreichen. Was als Anreiz gegenüber den Schüler:innen genutzt werden kann die Wünsche zeitnah einzureichen.
 Andernfalls wird die Liste der Schüler:innen zu beginn zufällig sortiert, die Fächer zugeteilt und dann wieder nach Klasse und Nachname sortiert.
