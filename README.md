@@ -10,28 +10,28 @@ Gegeben ist eine Liste mit Schüler:innen und deren Fach-Wünschen und eine List
 Daraus wird (in einem neuen Tabellenblatt) eine Zuteilung wie folgt errechnet, um möglichst vielen einen möglichst hohen Wunsch zu ermöglichen:
 1. Alle Erstwünsche werden von oben nach unten vergeben, bis alle Plätze voll sind
 2. Alle Zweitwünsche werden von oben nach unten vergeben, bis alle Plätze voll sind
-3. Wenn jemand noch keinen Platz hat wird versucht zu tauschen, mit jemand der den Erstwunsch bekommen hat. (Bzw. dann für den Zweit-, Dritt- und Viertwunsch).
+3. Wenn jemand noch keinen Platz hat wird versucht zu tauschen, mit jemand der den Erstwunsch bekommen hat. (Bzw.. dann für den Zweit-, Dritt- und Viertwunsch).
 4. Sonst wird der höchstmögliche noch freie Wunsch zugeteilt.
-5. Die Verteilung geht nicht unbedingt auf. Schüler:innen deren Wünsche nicht erfüllt werden konnten werden lila markiert, zur manuellen Nachberarbeitung.
+5. Die Verteilung geht nicht unbedingt auf. Schüler:innen deren Wünsche nicht erfüllt werden konnten werden lila markiert, zur manuellen Nachbearbeitung.
 
-In Testläufen konnten aber 390 aus 400 Schüler:innen zugetilt werden.
+In Testläufen konnten aber 390 aus 400 Schüler:innen zugeteilt werden.
 
-Es kann ausgwählt werden (durch einen Dialog beim Start des Macros), ob die Liste der Schüler:innen nach Priorität sorteiert ist, um die Schüler:innen weiter oben in der Liste bei der Wahl zu bevorteilen. Das kann z.B. der chronologischen Reihenfolge entsprechen, in der Schüler:innen die Rückmeldungen einreichen. Was als Anreiz gegenüber den Schüler:innen genutzt werden kann die Wünsche zeitnah einzureichen.
+Es kann ausgewählt werden (durch einen Dialog beim Start des Macros), ob die Liste der Schüler:innen nach Priorität sortiert ist, um die Schüler:innen weiter oben in der Liste bei der Wahl zu bevorteilen. Das kann z.B. der chronologischen Reihenfolge entsprechen, in der Schüler:innen die Rückmeldungen einreichen. Was als Anreiz gegenüber den Schüler:innen genutzt werden kann die Wünsche zeitnah einzureichen.
 Andernfalls wird die Liste der Schüler:innen zu beginn zufällig sortiert, die Fächer zugeteilt und dann wieder nach Klasse und Nachname sortiert.
 
 
-## Vorgesehende Formatierung
+## Vorgesehene Formatierung
 In einer Excelarbeitsmappe gibt es zwei Tabellenblätter:
-"Wahlmoeglichkeiten" listet die Namen der moeglichen Faecher auf und die Kursgröße je Fach.
+"Wahlmöglichkeiten" listet die Namen der möglichen Fächer auf und die Kursgröße je Fach.
 "Wahlen" listet alle Schüler:innen auf mit Namen, Klasse und jeweils deren Erst- bis Fünftwunsch der möglichen Fächer.
 
-Die Zuteilung wird in einem neuen vollständig genereirten Tabellenblatt erzeugt, sodass die ursprünglichen Liste unverändert bleiben. Man kann meherere Zuteilungen nacheinander in der selben Mappe generieren lassen und die generierten Tabellenblätter können nach Belieben gelöscht werden. Konflikte in der Tabellenbennenung werden im Makro umgangen.
+Die Zuteilung wird in einem neuen vollständig generierten Tabellenblatt erzeugt, sodass die ursprünglichen Liste unverändert bleiben. Man kann mehrere Zuteilungen nacheinander in der selben Mappe generieren lassen und die generierten Tabellenblätter können nach Belieben gelöscht werden. Konflikte in der Tabellenbenennung werden im Makro umgangen.
 
 
 ![Bildschirmfoto vom 2023-05-22 12-43-42](https://github.com/epoell/Wahlpflichtmanager/assets/47521842/9f4a94b3-40cc-4fa2-85a9-f28bea24e1e6)
 
-Formatierung der Wahlmoeglichkeiten
+Formatierung der Wahlmöglichkeiten
 
 ![Bildschirmfoto vom 2023-05-22 12-47-20](https://github.com/epoell/Wahlpflichtmanager/assets/47521842/8c9b62a9-ebd8-4c3a-b74a-9a9d4c54db42)
 
-Formatierung des Zuteilungsergebnisses (analog der Wahlen)
+Formatierung des Zuleitungsergebnisses (analog der Wahlen)
