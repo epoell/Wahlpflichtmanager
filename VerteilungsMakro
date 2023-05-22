@@ -162,6 +162,9 @@ SetName:
         
         'Das neu erzeugte Blatt merken
         Set ZuteilungsSheet = ActiveSheet
+        
+        ' Zellen leeren, die spaeter eh ueberschrieben werden
+        ZuteilungsSheet.Range(Columns(Spalte5Wunsch + 1), Columns(ZutFachSpalte + 1)).Clear
     End With
     
     ZuteilungsSheet.Cells(1, ZutSpalte) = "Zuteilung"
