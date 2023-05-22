@@ -27,8 +27,11 @@ In einer Excelarbeitsmappe gibt es zwei Tabellenblätter:
 
 Die Zuteilung wird in einem neuen vollständig genereirten Tabellenblatt erzeugt, sodass die ursprünglichen Liste unverändert bleiben. Man kann meherere Zuteilungen nacheinander in der selben Mappe generieren lassen und die generierten Tabellenblätter können nach Belieben gelöscht werden. Konflikte in der Tabellenbennenung werden im Makro umgangen.
 
-![Bildschirmfoto vom 2023-05-09 12-16-57](https://github.com/epoell/Wahlpflichtmanager/assets/47521842/fe7a1b14-3e8f-4c84-a6b1-4b30dcd81149)
+
+![Bildschirmfoto vom 2023-05-22 12-43-42](https://github.com/epoell/Wahlpflichtmanager/assets/47521842/9f4a94b3-40cc-4fa2-85a9-f28bea24e1e6)
+
 Formatierung der Wahlmoeglichkeiten
 
 ![Bildschirmfoto vom 2023-05-22 12-47-20](https://github.com/epoell/Wahlpflichtmanager/assets/47521842/8c9b62a9-ebd8-4c3a-b74a-9a9d4c54db42)
+
 Formatierung des Zuteilungsergebnisses (analog der Wahlen)
