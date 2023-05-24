@@ -5,9 +5,9 @@ VBA Makro für Excel, dass so fair wie möglich Fächer an Schüler:innen vertei
 
 VBA Macro for Excel, that tries to distribute chosen subjects as fair as possible among students/pupils.
 
-Ausgehend von einer Liste mit Schüler:innen und deren Fach-Wünschen und einer Liste mit möglichen Fächern und deren maximaler Kursgröße, wird eine möglichst Optimale Zuteilung von Kursen zu Schüler:innen erzeugt. Dieses Makro ist super, um als Stufenkoordinator:in  Fächer zu verteilen bei einer Mehrfachwahl, für den Wahlpflichtunterricht, die Zuordnung zu Projektwochen, AGs und Kursen.
+Ausgehend von einer Liste mit Schüler:innen und deren Fach-Wünschen und einer Liste mit möglichen Fächern und deren maximaler Kursgröße, wird eine möglichst Optimale Zuteilung von Kursen zu Schüler:innen erzeugt. Das Makro soll z.B. Stufenkoordinator:innen helfen bei der Verteilung von Wahlpflicht-Fächern/Wahlpflichtunterricht an der Schule, bei der Zuordnung zu Projektwochen, AGs und Kursen. Generell kann hiermit jede Zuteilung aus einer Mehrfachwahl erzeugt werden. Die Anzahl der Fächer, Beteiligten und Wahlmöglichkeiten ist dabei beliebig. Das Makro arbeitet einfach auf den verfügbaren Informationen.
 
-Ich habe das Makro für einen tollen Lehrer-Freund geschrieben, damit er mehr Zeit hat unser Rugby-Team zu trainieren. Wenn das Makro gefällt, freue ich mich über einen Stern.
+Urpsrünglich wurde dieses Programm für einen Freund und ganz tollen Lehrer geschrieben, damit er mehr Zeit hat unser Rugby-Team zu trainieren. Wenn das Makro gefällt, freue ich mich sehr über einen Stern.
 
 
 ## Vorgehen
