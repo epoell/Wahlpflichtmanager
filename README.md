@@ -38,4 +38,4 @@ Formatierung der Wahlmöglichkeiten
 
 ![Bildschirmfoto vom 2023-05-22 12-47-20](https://github.com/epoell/Wahlpflichtmanager/assets/47521842/8c9b62a9-ebd8-4c3a-b74a-9a9d4c54db42)
 
-Formatierung des Zuleitungsergebnisses (analog der Wahlen)
+Formatierung des Zuleitungsergebnisses (analog der Wahlen). (Die Daten sind natürlich randomisiert)
