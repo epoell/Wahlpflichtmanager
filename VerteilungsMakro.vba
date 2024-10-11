@@ -1,7 +1,7 @@
 'Konstanten
 '----------
 'Anzahl moeglicher Faecher, muss fest sein um Arrays initiieren zu koennen
-Public Const Faecherzahl As Long = 26
+Public Const Faecherzahl As Long = 5
 'Tabellennamen
 Public Const StrWahlen As String = "Wahlen"
 Public Const StrWahlopt As String = "Wahlmoeglichkeiten"
@@ -50,7 +50,7 @@ Sub FachVerteilung()
     'In Wahloptionnen hat Titel, es geht mit Kennziffer 1 los
     If ThisWorkbook.Sheets(StrWahlopt).Cells(2, SpalteZiffer).Value <> "1" Then
         Title = "Tabelle kontrollieren"
-        Msg = "Im Tabellenblatt '" & StrWahlopt & "' muessen in Spalte A ist die Kennziffern stehen (aufsteigend sortiert) - und in Zelle A2 mit 1 beginnen." _
+        Msg = "Im Tabellenblatt '" & StrWahlopt & "' muessen in Spalte A die Kennziffern stehen (aufsteigend sortiert) - und in Zelle A2 mit 1 beginnen." _
                 & vbNewLine & "Bitte anpassen."
         Style = vbOKOnly Or vbCritical  'Nur die Schaltflaehen OK anzeigen und das Symbol Kritische Meldung anzeigen.
         Response = MsgBox(Msg, Style, Title)
